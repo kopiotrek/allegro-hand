@@ -89,7 +89,7 @@ install_gazebo_source(){
 
 	# clone gazebo
 	printf "${GREEN}cloning gazebo\n${NC}"
-	hg clone https://bitbucket.org/osrf/gazebo/branch/gazebo9 /tmp/gazebo9
+	hg clone https://github.com/gazebosim/gazebo-classic/tree/gazebo9 /tmp/gazebo9
 	cd /tmp/gazebo9
 	printf "${GREEN}checkout gazebo9\n${NC}"
 	hg checkout gazebo9
