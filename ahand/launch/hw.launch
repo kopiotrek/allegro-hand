@@ -11,9 +11,9 @@
 	<arg name="output" default="screen"/>
 
 	<group ns="$(arg robot_name)">
-		<param name="robot_description" command="$(find xacro)/xacro.py --inorder '$(find ahand_description)/urdf/ahand.xacro' hand_type:=$(arg hand_type)"/>
+		<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find ahand_description)/urdf/ahand.xacro' hand_type:=$(arg hand_type)"/>
 
-		<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+		<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
 			<rosparam param="publish_frequency">300</rosparam>
 		</node>
 	</group>
