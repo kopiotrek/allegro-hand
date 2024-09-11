@@ -25,28 +25,6 @@ install_library(){
 	fi
 }
 
-install_peak_linux_driver(){
-	# if [[ ! -f /usr/include/libpcan.h ]]; then
-		printf "${GREEN}installing peak linux driver\n${NC}"
-		cd ${DIR}/peak-linux-driver/
-		make NET=NO PCC=NO
-		sudo make install
-		sudo modprobe pcan 1> /dev/null
-		cd ${DIR}
-	#else
-	#	printf "${GREEN}peak linux driver ... ok\n${NC}"
-	#fi
-}
-
-install_pcan_basic(){
-	printf "${GREEN}installing pcan basic api\n${NC}"
-	cd ${DIR}/pcan-basic/pcanbasic/
-	make
-	sudo make install
-	cd ${DIR}
-}
-
-
 install_library libncurses5-dev
 install_library libncurses5
 install_library libpopt-dev
